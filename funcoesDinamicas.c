@@ -16,7 +16,7 @@ void listaDinamica() {
         vetor = criarLista(tamanho);
         vetor = inserir(vetor, tamanho);
 
-        // Início do tempo
+        // InÃ­cio do tempo
         inicio = clock();
 
         mergeSort(vetor, 0, tamanho - 1);
@@ -28,9 +28,9 @@ void listaDinamica() {
 
         fprintf(f, "%d; %d\n", tamanho, tempo);
 
-        printf("%d\n", tamanho);
+        printf("%d : %d\n", tamanho, tempo);
 
-        free(vetor); // Libere a memória alocada dinamicamente
+        free(vetor); // Libere a memÃ³ria alocada dinamicamente
     }
 
     fclose(f);
@@ -39,7 +39,7 @@ void listaDinamica() {
 char *criarLista(int tamanho) {
     int *vetor = (int *)malloc(tamanho * sizeof(int));
     if (vetor == NULL) {
-        printf("Falha na alocação de memória\n");
+        printf("Falha na alocaÃ§Ã£o de memÃ³ria\n");
         exit(1);
     }
     return vetor;
@@ -95,7 +95,7 @@ void merge(char *vetor, int inicio, int meio, int fim) {
 
     if(esquerda == NULL || direita == NULL)
 	{
-        printf("Falha na alocação de memória\n");
+        printf("Falha na alocaÃ§Ã£o de memÃ³ria\n");
         exit(1);
     }
 
